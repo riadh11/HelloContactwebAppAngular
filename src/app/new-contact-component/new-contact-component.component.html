@@ -1,0 +1,50 @@
+<div class="panel panel-primary" *ngIf="mode=='new'"> 
+  <div class="panel-heading">Nouveau Contact</div>
+   <div class="panel-body"> 
+     <div class="form-group"> 
+       <label class="control-lable">Nom:</label> 
+       <input type="text" [(ngModel)]="contact.nom" class="form-control"> 
+      </div> 
+      <div class="form-group">
+         <label class="control-lable">Prénom:</label>
+          <input type="text" [(ngModel)]="contact.prenom" class="form-control"> 
+        </div> 
+        <div class="form-group">
+           <label class="control-lable">Date naissance:</label> 
+           <input type="date" [(ngModel)]="contact.dateNaissance" class="formcontrol">
+           </div> <div class="form-group">
+              <label class="control-lable">Email:</label>
+               <input type="email" [(ngModel)]="contact.email" class="form-control">
+               </div> <div class="form-group"> <label class="control-lable">Tel:</label>
+                 <input type="tel" [(ngModel)]="contact.tel" class="form-control"> </div> 
+                 <button (click)="saveContact()" class="btn ptn-primary">Save</button>
+                 </div> 
+                </div> 
+                <div class="panel panel-primary" *ngIf="mode=='confirm'"> 
+                  <div class="panel-heading">Confirmation</div>
+                   <div class="panel-body"> 
+                     <div class="form-group">
+                        <label class="control-lable">Id:</label> 
+                        <label class="control-lable">{{contact.id}}</label> 
+                      </div> 
+                      <div class="form-group"> 
+                        <label class="control-lable">Nom:</label> 
+                        <label class="control-lable">{{contact.nom}}</label>
+                       </div>
+                        <div class="form-group"> 
+                          <label class="control-lable">Prénom:</label>
+                           <label class="control-lable">{{contact.prenom}}</label> 
+                          </div>
+                           <div class="form-group">
+                             <label class="control-lable">Date Naissance:</label> 
+                             <label class="control-lable">{{contact.dateNaissance}}</label> 
+                            </div> <div class="form-group"> <label class="control-lable">Email:</label> 
+                              <label class="control-lable">{{contact.email}}</label> 
+                            </div>
+                               <div class="form-group"> 
+                                 <label class="control-lable">Tel:</label>
+                                  <label class="control-lable">{{contact.tel}}</label>
+                                 </div> <button (click)="newContact()" class="btn btn-primary">OK</button> 
+                                </div> 
+                              </div> 
+                            

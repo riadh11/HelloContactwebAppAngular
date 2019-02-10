@@ -1,0 +1,33 @@
+<div class="container"> 
+  <div class="panel panel-primary"> 
+    <div class="panel-heading">About Component</div>
+    <div class="panel-body abo"> 
+        <img src="./assets/img21.png" id=fondecran class=fondecran alt=/>
+       <ul class=""> 
+         <li>Nom : {{info.nom}}</li> 
+         <li>Email : {{info.email}}</li> 
+         <li>Tel : {{info.tel}}</li>
+       </ul> 
+       
+    <div class="form-group">
+         <label>Message:</label> 
+         <input type="text" [(ngModel)]="comment.message"> 
+         <button (click)="addInfos()" [disabled]="newComment" class="btn btn-primary">
+           Add comment</button> 
+    </div> 
+         <div *ngIf="comments.length>0; elsenoComments">
+            <h3>Liste des messages :</h3>
+            <ul class="list-group mess">
+              <li *ngFor="let c of comments" class="list-groupitem" >
+               <h4>{{c.message}}</h4>
+               <span class="badge"> {{c.date|date:'HH:mm:ss'}}</span>
+              </li > 
+            </ul> 
+          </div> 
+          <ng-template #noComments> 
+          <p> Liste des commentaires est vide</p> 
+         </ng-template>
+</div> 
+</div> 
+
+</div>

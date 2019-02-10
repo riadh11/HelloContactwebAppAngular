@@ -1,0 +1,33 @@
+<div class="panel panel-primary"> 
+  <div class="panel-heading">Liste des contacts</div> 
+  <div class="panel-body"> 
+    <table class="table table-striped">
+       <tr> 
+         <th>ID</th>
+        <th>Nom</th>
+        <th>Prénom</th>
+        <th></th>
+        <th></th> 
+       </tr>
+       <tr *ngFor="let c of contacts"> 
+             <td>{{c.id}}</td>
+              <td>{{c.nom}}</td> 
+              <td>{{c.prenom}}</td>
+              <td>{{c.prenom}}</td>
+              <td>{{c.prenom}}</td>
+              <td>{{c.prenom}}</td> 
+              
+      </tr>
+      <!--<td><a routerLink="/detailContact/{{c.id}}">Detail</a></td> -->
+      
+              <a class="btn btn-primary" (click)="detailContact('c.id')">Detail</a>
+
+              <a class="btn btn-danger  btn pull-right" (click)="deleteContact('c.id')">Delete</a>
+        
+        
+        </table>
+             </div>
+             </div>
+            
+            
+        
